@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Atividades_diarias">
+
+    <ImageButton
+        android:id="@+id/Btn_Voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/ic_arrow_back"
+        android:contentDescription="Voltar"
+        app:tint="#5EAF6D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp" />
+
+    <View
+        android:id="@+id/fundoVerdeSaudacao"
+        android:layout_width="188dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="244dp"
+        android:background="@drawable/fundo_verde_arredondado"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-15dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="53dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="84dp"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fundoVerdeSaudacao"
+        app:layout_constraintTop_toTopOf="@+id/fundoVerdeSaudacao"
+        app:srcCompat="@drawable/app" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="99dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="32dp"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:shadowColor="#80000000"
+        android:shadowDx="0"
+        android:shadowDy="3"
+        android:shadowRadius="7"
+        android:text="CUIDARTRITE\nAPP"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fundoVerdeSaudacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.269" />
+
+
+    <Button
+        android:id="@+id/button_selecionar_data"
+        android:layout_width="194dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#3D6C4A"
+        android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+        android:text="Selecionar Data"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipgroup_status_filter"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        app:chipSpacingHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/button_selecionar_data"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_selecionar_data"
+        app:layout_constraintTop_toBottomOf="@+id/button_selecionar_data"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_todas"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Todas"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="#3D6C4A" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_pendentes"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pendentes"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="#3D6C4A" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_realizadas"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Realizadas"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="#3D6C4A" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_atrasadas"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atrasadas"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="#3D6C4A" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_atividades"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipgroup_status_filter"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/list_item_atividade" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_selecionar_data" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAjudaFloating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#2196F3"
+        android:contentDescription="Precisa de ajuda?"
+        android:elevation="6dp"
+        android:tooltipText="Precisa de ajuda?"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/suporte"
+        app:tint="@null"
+        app:maxImageSize="40dp"
+        android:scaleType="centerInside" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

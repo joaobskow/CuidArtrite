@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8"
+    tools:context=".Conta">
+
+    <TextView
+        android:id="@+id/tvFooter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="João Vitor Beskow &amp; Pietro Frey"
+        android:textColor="#09A119"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="67dp"
+        android:layout_height="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Created by"
+        android:textColor="#228134"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#3D6C4A"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.BottomRoundedCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="32dp">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="71dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/app" />
+
+            <ImageButton
+                android:id="@+id/btnVoltarConta"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Voltar"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvTituloConta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTA"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/btnVoltarConta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btnVoltarConta" />
+
+
+            <FrameLayout
+                android:id="@+id/frameFoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTituloConta">
+
+                <ImageView
+                    android:id="@+id/ivProfilePic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Foto de perfil"
+                    android:src="@drawable/ic_profile_placeholder_blue" />
+
+                <ImageButton
+                    android:id="@+id/btnEditarFoto"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="top|end"
+                    android:background="@drawable/circular_profile_background"
+                    android:src="@drawable/ic_pencil_edit"
+                    app:tint="@android:color/black" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvNomeUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="João"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/frameFoto"
+                app:layout_constraintStart_toStartOf="@id/frameFoto"
+                app:layout_constraintTop_toBottomOf="@id/frameFoto" />
+
+            <TextView
+                android:id="@+id/tvEmailUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="example@gmail.com"
+                android:textColor="#E0E0E0"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/tvNomeUsuario"
+                app:layout_constraintStart_toStartOf="@id/tvNomeUsuario"
+                app:layout_constraintTop_toBottomOf="@id/tvNomeUsuario" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:text="CUIDARTRITE \n         APP"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/layoutBotoes"
+        android:layout_width="410dp"
+        android:layout_height="408dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardHeader">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAcessibilidade"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/rounded_button_gray"
+            android:drawableEnd="@drawable/ic_chevron_right"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Acessibilidade"
+            android:textAllCaps="false"
+            android:textColor="#4F4F4F"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlterarSenha"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button_gray"
+            android:drawableEnd="@drawable/ic_chevron_right"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Alterar Senha"
+            android:textAllCaps="false"
+            android:textColor="#4F4F4F"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSair"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button_gray"
+            android:drawableEnd="@drawable/ic_chevron_right"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Sair"
+            android:textAllCaps="false"
+            android:textColor="#D32F2F"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fundoVerdeSaudacao"
+        android:layout_width="290dp"
+        android:layout_height="132dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/fundo_verde_arredondado"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutBotoes"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="96dp"
+        android:layout_height="103dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fundoVerdeSaudacao"
+        app:layout_constraintEnd_toEndOf="@+id/fundoVerdeSaudacao"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="@+id/fundoVerdeSaudacao"
+        app:layout_constraintTop_toTopOf="@+id/fundoVerdeSaudacao"
+        app:layout_constraintVertical_bias="0.517"
+        app:srcCompat="@drawable/app" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:text="CUIDARTRITE \n         APP"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fundoVerdeSaudacao"
+        app:layout_constraintEnd_toEndOf="@+id/fundoVerdeSaudacao"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/fundoVerdeSaudacao"
+        app:layout_constraintVertical_bias="0.518" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

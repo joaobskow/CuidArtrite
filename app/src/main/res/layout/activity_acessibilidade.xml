@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".acessibilidade">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="362dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/fundo_verde_arredondado"
+        android:padding="20dp"
+        android:text="                             Acessibilidade\n    Personalize o aplicativo de maneiras que \n          funcionam melhor para você, com\n           recursos para idioma, tema e fonte."
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.276" />
+
+    <!-- Card principal -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardOpcoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="52dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo">
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botão Salvar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSalvarAlteracoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="#3D6C4A"
+        android:text="Salvar Alterações"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.94" />
+
+    <!-- Conteúdo das opções -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="296dp"
+        android:background="@drawable/rounded_gray_background"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Tema -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tema:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleGroupTema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTemaLight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="Claro"
+                android:textColor="@color/black"
+                app:icon="@drawable/ic_sun"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTemaDark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:text="Escuro"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_moon"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/white" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C4C4C4" />
+
+        <!-- Idioma -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Idioma:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerIdioma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C4C4C4" />
+
+        <!-- Espessura da Fonte -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Espessura da Fonte:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleGroupFonte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFonteNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="Normal"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFonteNegrito"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:text="Negrito"
+                android:textColor="@color/white" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C4C4C4" />
+    </LinearLayout>
+
+    <!-- Ícone e botão voltar -->
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="75dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="168dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app" />
+
+    <ImageButton
+        android:id="@+id/Btn_Voltar"
+        android:layout_width="20dp"
+        android:layout_height="22dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back"
+        app:tint="#5EAF6D" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

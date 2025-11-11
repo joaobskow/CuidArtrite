@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".tela_login">
+
+    <TextView
+        android:id="@+id/textViewLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:text="Login"
+        android:textColor="#5EAF6D"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="331dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/campos_email"
+        android:hint="E-MAIL"
+        android:inputType="textEmailAddress"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLoginTitle" />
+
+    <EditText
+        android:id="@+id/editSenha"
+        android:layout_width="335dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/campos_email"
+        android:hint="SENHA"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEntrar"
+        android:layout_width="255dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#5EAF6D"
+        android:text="ENTRAR"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+
+    <TextView
+        android:id="@+id/textViewOu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="OU"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardGoogleLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnEntrar"
+        app:layout_constraintStart_toStartOf="@+id/btnEntrar"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOu">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btnGoogleLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/txtEsqueciSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="ESQUECI MINHA SENHA"
+        android:textColor="#03A9F4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardGoogleLogin" />
+
+    <TextView
+        android:id="@+id/txtCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="NÃO POSSUI UMA CONTA? CADASTRAR-SE"
+        android:textColor="#03A9F4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEsqueciSenha" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="108dp"
+        android:layout_height="332dp"
+        android:layout_marginBottom="576dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/app" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

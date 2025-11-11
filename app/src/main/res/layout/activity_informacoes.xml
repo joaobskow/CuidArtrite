@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    tools:context=".Informacoes">
+
+    <!-- 🔙 Botão de voltar -->
+    <ImageButton
+        android:id="@+id/Btn_Voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/ic_arrow_back"
+        android:contentDescription="Voltar"
+        app:tint="#5EAF6D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- 🔽 Conteúdo rolável -->
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/Btn_Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/txtTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="Entendendo a Osteoartrite"
+                        android:textColor="#2E3A59"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtDescricao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="A osteoartrite (ou artrose) é o desgaste natural da cartilagem que protege as articulações, causando dor e rigidez. É comum após os 60 anos, tem tratamento e controle — e é possível viver bem!"
+                        android:textColor="#444444"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Sintomas mais comuns"
+                        android:textColor="#1E88E5"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="• Dor nas articulações (piora com movimento)\n• Rigidez matinal (melhora em 30 min)\n• Inchaço leve e estalos\n• Dificuldade em tarefas simples\n• Sensação de travamento"
+                        android:textColor="#444444"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Causas e fatores de risco"
+                        android:textColor="#1E88E5"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="Idade, movimentos repetitivos, lesões antigas, sobrepeso, genética e postura inadequada.\n\nVocê pode agir sobre: peso, atividade física, postura, alimentação e proteção articular."
+                        android:textColor="#444444"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Tratamento e cuidados"
+                        android:textColor="#1E88E5"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="O objetivo é reduzir a dor e manter o movimento.\n\n• Medicamentos\n• Práticas integrativas (exercícios, acupuntura, yoga)\n• Fisioterapia\n• Mudanças no estilo de vida\n• Tratamentos avançados (infiltrações, cirurgias)\n\nO melhor resultado vem da combinação de cuidados!"
+                        android:textColor="#444444"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Alimentação amiga das articulações"
+                        android:textColor="#1E88E5"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="Inclua: peixes, azeite, vegetais verde-escuros, frutas cítricas, alho, gengibre, cúrcuma, castanhas e nozes.\n\nEvite: açúcar, frituras, carnes processadas, álcool e sal em excesso.\n\nBeba 6 a 8 copos de água por dia!"
+                        android:textColor="#444444"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Adaptações no dia a dia"
+                        android:textColor="#1E88E5"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="• Use utensílios com cabos grossos\n• Instale barras de apoio e tapetes antiderrapantes\n• Prefira calçados confortáveis e firmes\n• Levante-se devagar e faça pausas"
+                        android:textColor="#444444"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Cuidando da mente"
+                        android:textColor="#1E88E5"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="É normal sentir tristeza, medo ou frustração — mas você não está sozinho(a).\n\nBusque apoio, pratique gratidão, mantenha hobbies e celebre pequenas vitórias.\nSe a tristeza persistir, procure um psicólogo."
+                        android:textColor="#444444"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="A qualidade de vida vem do equilíbrio entre movimento, descanso, apoio e atitude positiva.\n\n“A osteoartrite é parte de você, mas não define quem você é.”"
+                        android:textColor="#2E7D32"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        android:layout_marginBottom="24dp" />
+
+                    <Button
+                        android:id="@+id/btnajuda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Precisa de ajuda? Clique aqui"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp"
+                        android:backgroundTint="#3D6C4A"
+                        android:elevation="4dp"
+                        android:layout_gravity="center_horizontal" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

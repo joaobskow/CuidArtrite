@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/rounded_card_green_border"
+    android:elevation="4dp"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_atividade_titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Alongamento de mãos"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/text_tempo_repeticoes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_tempo_repeticoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 Repetições 5 Minutos"
+        android:textColor="#424242"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/text_atividade_descricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="Sente-se confortavelmente, abra as mãos devagar, feche formando punho suave."
+        android:textColor="#424242"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/text_local_afetado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_atividade_titulo" />
+
+    <TextView
+        android:id="@+id/text_local_afetado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Local do corpo afetado: Mão"
+        android:textColor="#424242"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_tempo_repeticoes" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_status"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:minWidth="90dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/button_status_pendente"
+        android:text="Pendente"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_local_afetado"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

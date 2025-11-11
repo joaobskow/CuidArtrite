@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">app_osteoartrite</string>
+
+    <string name="termos_de_uso_titulo">Termos de Uso e Política de Privacidade (LGPD)</string>
+
+    <string name="termos_de_uso_conteudo">
+        "Ao marcar a caixa \"Eu li e concordo com os termos de uso\", você confirma que leu e concorda com todas as disposições destes Termos de Uso e da nossa Política de Privacidade, em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/18).\n\n"
+
+        "<b>1. O SERVIÇO</b>\n"
+        "O [NOME DO SEU APP] (\"Aplicativo\") é uma plataforma que visa conectar Pacientes, Profissionais de Saúde e Clínicas para facilitar o gerenciamento e acompanhamento de informações relacionadas à osteoartrite. O uso deste aplicativo não substitui diagnósticos ou consultas médicas presenciais.\n\n"
+
+        "<b>2. COLETA DE DADOS (LGPD)</b>\n"
+        "Para operar o Aplicativo, precisamos coletar dados pessoais. Ao se cadastrar, coletaremos:\n"
+        "• <b>Para Pacientes:</b> Nome, CPF, Endereço, Telefone, E-mail, Senha e informações de saúde que você fornecer (incluindo o status de \"Não possuo...\" no cadastro).\n"
+        "• <b>Para Profissionais:</b> Nome, CPF, Registro Profissional, Endereço, Telefone, E-mail e Senha.\n"
+        "• <b>Para Clínicas:</b> Razão Social, CNPJ, Endereço, Telefone, E-mail e Senha.\n\n"
+
+        "<b>3. DADOS PESSOAIS SENSÍVEIS (LGPD)</b>\n"
+        "Devido à natureza deste aplicativo, dados sobre sua saúde (incluindo diagnósticos, sintomas, tratamentos e o status fornecido no cadastro) são classificados como <b>Dados Pessoais Sensíveis</b>. Exigimos seu consentimento explícito (marcando a caixa) para coletar e processar esses dados.\n\n"
+
+        "<b>4. FINALIDADE E BASE LEGAL (LGPD)</b>\n"
+        "Usamos seus dados para:\n"
+        "• <b>Prestar o serviço (Base: Execução de Contrato):</b> Criar sua conta, permitir o login, redefinir sua senha e operar as funcionalidades do app.\n"
+        "• <b>Processar dados de saúde (Base: Consentimento e Tutela da Saúde):</b> Permitir que você (Paciente) registre suas informações e as compartilhe com os Profissionais ou Clínicas que você selecionar.\n"
+        "• <b>Conectar Usuários:</b> As informações do Paciente (incluindo dados sensíveis) só serão visíveis aos Profissionais ou Clínicas aos quais o Paciente der permissão explícita dentro da plataforma.\n"
+        "• <b>Segurança (Base: Interesse Legítimo):</b> Monitorar a segurança do app e prevenir fraudes.\n\n"
+
+        "<b>5. ARMAZENAMENTO E COMPARTILHAMENTO (LGPD)</b>\n"
+        "Seus dados são armazenados de forma segura em servidores em nuvem (Operadores), como o Google Firebase, que adotam padrões de segurança elevados.\n\n"
+        "<b>Não compartilharemos seus dados pessoais com terceiros, exceto</b>:\n"
+        "• Com os Profissionais ou Clínicas que você, Paciente, autorizar.\n"
+        "• Com os Operadores de tecnologia (ex: Firebase) necessários para o app funcionar.\n"
+        "• Por obrigação legal ou ordem judicial.\n\n"
+
+        "<b>6. SEGURANÇA</b>\n"
+        "Utilizamos o Firebase Authentication para proteger suas credenciais de acesso e armazenamos seus dados adicionais no Cloud Firestore, ambos serviços da Google que utilizam criptografia.\n\n"
+
+        "<b>7. SEUS DIREITOS (LGPD)</b>\n"
+        "Como titular dos dados, você tem o direito de:\n"
+        "• Acessar seus dados.\n"
+        "• Corrigir dados incompletos ou incorretos.\n"
+        "• Solicitar a exclusão de seus dados (revogando seu consentimento).\n"
+        "• Obter informações sobre o compartilhamento.\n\n"
+        "Você pode exercer a maioria desses direitos diretamente pelo seu perfil no app. Para exclusão ou outras solicitações, entre em contato conosco.\n\n"
+
+        "<b>8. CONTATO E DPO</b>\n"
+        "Para qualquer dúvida sobre esta política ou seus dados, entre em contato com nosso Encarregado de Proteção de Dados (DPO) através do e-mail: <b>[SEU E-MAIL DE CONTATO OU DPO]</b>.\n\n"
+
+        "<b>9. ACEITAÇÃO</b>\n"
+        "Ao clicar em \"Eu li e concordo com os termos de uso\", você consente de forma livre, informada e inequívoca com o processamento de seus dados pessoais e dados pessoais sensíveis, nos termos aqui descritos."
+    </string>
+</resources>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8"
+    tools:context=".Registre_dor">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#3D6C4A"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.BottomRoundedCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageButton
+                android:id="@+id/btnVoltar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Voltar"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@android:color/white" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTitleDores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="#3D6C4A"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="60dp"
+                android:layout_height="79dp"
+                android:layout_marginEnd="84dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/app" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DORES"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.425"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.8" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CUIDARTRITE \n        APP"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <EditText
+        android:id="@+id/editDescricaoDor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:hint="Como está sua dor hoje?"
+        android:inputType="textCapSentences"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardHeader" />
+
+    <LinearLayout
+        android:id="@+id/layoutSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editDescricaoDor">
+
+        <ImageView
+            android:id="@+id/ivEmojiFeliz"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_emoji_happy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="0"
+            android:textColor="@android:color/black" />
+
+        <SeekBar
+            android:id="@+id/seekBarDor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="10"
+            android:progress="7"
+            android:progressTint="#F44336"
+            android:thumbTint="#F44336" />
+
+        <TextView
+            android:id="@+id/tvNivelDor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="10"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/ivEmojiTriste"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_emoji_sad" />
+
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/viewFlipperCorpo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSalvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutSlider">
+
+        <ImageView
+            android:id="@+id/ivCorpoFrente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Corpo de Frente"
+            android:scaleType="fitCenter"
+            android:src="@drawable/human_anatomy_front" />
+
+        <ImageView
+            android:id="@+id/ivCorpoDireita"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Corpo Lado Direito"
+            android:scaleType="fitCenter"
+            android:src="@drawable/human_anatomy_right" />
+
+        <ImageView
+            android:id="@+id/ivCorpoCostas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Corpo de Costas"
+            android:scaleType="fitCenter"
+            android:src="@drawable/human_anatomy_back" />
+
+        <ImageView
+            android:id="@+id/ivCorpoEsquerda"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Corpo Lado Esquerdo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/human_anatomy_left" />
+
+    </ViewFlipper>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_button_green"
+        android:text="Salvar"
+        android:textAllCaps="false"
+        app:backgroundTint="#3D6C4A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAjudaFloating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#2196F3"
+        android:contentDescription="Precisa de ajuda?"
+        android:elevation="6dp"
+        android:tooltipText="Precisa de ajuda?"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/suporte"
+        app:tint="@null"
+        app:maxImageSize="40dp"
+        android:scaleType="centerInside" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

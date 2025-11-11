@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dor_padrao">#9E9E9E</color>
+    <color name="design_default_color_primary">#4CAF50</color>
+    <color name="design_default_color_primary_dark">#388E3C</color>
+    <color name="design_default_color_secondary">#FFC107</color>
+    <color name="dor_leve">#66BB6A</color>
+    <color name="dor_media">#FFD740</color>
+    <color name="dor_grave">#F44336</color>
+    <color name="card_background_light">#FFFFFF</color>
+    <color name="text_color_hint">#757575</color>
+    <color name="texto_amarelo">#000000</color>
+    <color name="app_background_color">#F0F4F8</color>
+</resources>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Cadastro_Paciente"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:id="@+id/textViewTituloCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:text="Cadastro de paciente"
+            android:textColor="#5EAF6D"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.217"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editNome"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/campos_email"
+            android:hint="NOME"
+            android:inputType="textPersonName"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloCadastro" />
+
+        <EditText
+            android:id="@+id/editCPF"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/campos_email"
+            android:hint="CPF"
+            android:inputType="number"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/editNome"
+            app:layout_constraintStart_toStartOf="@+id/editNome"
+            app:layout_constraintTop_toBottomOf="@+id/editNome" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutEndereco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/editCPF"
+            app:layout_constraintStart_toStartOf="@+id/editCPF"
+            app:layout_constraintTop_toBottomOf="@+id/editCPF">
+
+            <EditText
+                android:id="@+id/editEndereco"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/campos_email"
+                android:hint="ENDEREÇO"
+                android:inputType="textPostalAddress"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp" />
+
+            <EditText
+                android:id="@+id/editNumero"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/campos_email"
+                android:hint="Nº"
+                android:inputType="number"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLocal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayoutEndereco"
+            app:layout_constraintStart_toStartOf="@+id/linearLayoutEndereco"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutEndereco">
+
+            <EditText
+                android:id="@+id/editCEP"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/campos_email"
+                android:hint="CEP"
+                android:inputType="number"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp" />
+
+            <EditText
+                android:id="@+id/editCidade"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="0.4"
+                android:background="@drawable/campos_email"
+                android:hint="CIDADE"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp" />
+
+            <EditText
+                android:id="@+id/editUF"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/campos_email"
+                android:hint="UF"
+                android:inputType="textCapCharacters"
+                android:maxLength="2"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTelefone"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/campos_email"
+            android:hint="(DDD) 00000-0000"
+            android:inputType="phone"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayoutLocal"
+            app:layout_constraintStart_toStartOf="@+id/linearLayoutLocal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutLocal" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/campos_email"
+            android:hint="E-MAIL"
+            android:inputType="textEmailAddress"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/editTelefone"
+            app:layout_constraintStart_toStartOf="@+id/editTelefone"
+            app:layout_constraintTop_toBottomOf="@+id/editTelefone" />
+
+        <EditText
+            android:id="@+id/editSenha"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/campos_email"
+            android:hint="SENHA (mínimo 6 caracteres)"
+            android:inputType="textPassword"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/editEmail"
+            app:layout_constraintStart_toStartOf="@+id/editEmail"
+            app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+        <CheckBox
+            android:id="@+id/checkDoenca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Não possuo nenhum tipo de doença ou conformidade, uso apenas para cuidado com a saúde."
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/editSenha"
+            app:layout_constraintStart_toStartOf="@+id/editSenha"
+            app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+
+        <CheckBox
+            android:id="@+id/checkTermos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Eu li e concordo com os termos de uso."
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/checkDoenca"
+            app:layout_constraintStart_toStartOf="@+id/checkDoenca"
+            app:layout_constraintTop_toBottomOf="@+id/checkDoenca" />
+
+        <TextView
+            android:id="@+id/txtVerTermos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Ler os Termos de Uso"
+            android:textColor="#03A9F4"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/checkTermos"
+            app:layout_constraintTop_toBottomOf="@+id/checkTermos" />
+
+        <Button
+            android:id="@+id/btnConfirmarCadastro"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#5EAF6D"
+            android:text="CADASTRAR"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/checkTermos"
+            app:layout_constraintStart_toStartOf="@+id/checkTermos"
+            app:layout_constraintTop_toBottomOf="@+id/txtVerTermos" />
+
+        <TextView
+            android:id="@+id/txtJaPossuiCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="JÁ POSSUO CADASTRO"
+            android:textColor="#03A9F4"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnConfirmarCadastro" />
+
+        <ImageButton
+            android:id="@+id/Btn_Voltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/ic_arrow_back"
+            android:contentDescription="Voltar"
+            app:tint="#5EAF6D"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

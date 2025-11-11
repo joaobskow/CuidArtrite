@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Registro_Diagnostico"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:text="Registrar Diagnóstico"
+            android:textColor="#5EAF6D"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editDiagnostico"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/campos_email"
+            android:hint="Diagnóstico:"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+
+        <EditText
+            android:id="@+id/editComorbidades"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/campos_email"
+            android:gravity="top|start"
+            android:hint="Comorbidades:"
+            android:inputType="textMultiLine"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/editDiagnostico"
+            app:layout_constraintStart_toStartOf="@+id/editDiagnostico"
+            app:layout_constraintTop_toBottomOf="@+id/editDiagnostico" />
+
+        <EditText
+            android:id="@+id/editData"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/campos_email"
+            android:hint="Data (DD/MM/AAAA):"
+            android:inputType="date"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/editComorbidades"
+            app:layout_constraintStart_toStartOf="@+id/editComorbidades"
+            app:layout_constraintTop_toBottomOf="@+id/editComorbidades" />
+
+        <EditText
+            android:id="@+id/editProfissional"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/campos_email"
+            android:hint="Profissional Responsável:"
+            android:inputType="textPersonName"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/editData"
+            app:layout_constraintStart_toStartOf="@+id/editData"
+            app:layout_constraintTop_toBottomOf="@+id/editData" />
+
+        <EditText
+            android:id="@+id/editObservacao"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/campos_email"
+            android:gravity="top|start"
+            android:hint="Observação."
+            android:inputType="textMultiLine"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/editProfissional"
+            app:layout_constraintStart_toStartOf="@+id/editProfissional"
+            app:layout_constraintTop_toBottomOf="@+id/editProfissional" />
+
+        <Button
+            android:id="@+id/btnCadastrarDiagnostico"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#5EAF6D"
+            android:text="CADASTRAR"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/editObservacao"
+            app:layout_constraintStart_toStartOf="@+id/editObservacao"
+            app:layout_constraintTop_toBottomOf="@+id/editObservacao" />
+
+        <TextView
+            android:id="@+id/txtPular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pular"
+            android:textColor="#03A9F4"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnCadastrarDiagnostico"
+            app:layout_constraintStart_toStartOf="@+id/btnCadastrarDiagnostico"
+            app:layout_constraintTop_toBottomOf="@+id/btnCadastrarDiagnostico" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
